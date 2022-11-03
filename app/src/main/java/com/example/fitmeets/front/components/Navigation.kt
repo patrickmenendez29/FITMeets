@@ -10,12 +10,13 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
+import com.example.fitmeets.R
 
 sealed class NavigationItem(var route: String, var icon: Int, var title: String ) {
-    object Home: NavigationItem("home",0, "Home" )
-    object Profile: NavigationItem("profile", 1, "My profile")
-    object Search: NavigationItem("search", 2, "Search")
-    object Inbox: NavigationItem("inbox", 3, "My inbox")
+    object Home: NavigationItem("home",R.drawable.home_24, "Home" )
+    object Profile: NavigationItem("profile", R.drawable.user_24, "My profile")
+    object Inbox: NavigationItem("inbox", R.drawable.inbox_24, "My inbox")
+
 
 }
 
@@ -24,7 +25,7 @@ sealed class NavigationItem(var route: String, var icon: Int, var title: String 
 fun TopBar() {
     TopAppBar(
         title = { Text(text = stringResource(R.string.app_name), fontSize = 18.sp) },
-        backgroundColor = colorResource(id = R.color.colorPrimary),
+        backgroundColor = colorResource(id = R.color.systemRed),
         contentColor = Color.White
     )
 }
@@ -36,7 +37,6 @@ fun BottomNavigationBar() {
 
          NavigationItem.Home,
          NavigationItem.Profile,
-         NavigationItem.Search,
          NavigationItem.Inbox
 
     )
