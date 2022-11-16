@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class WelcomeViewController {
 
 
-    static WelcomeViewController shared = new WelcomeViewController();
+    public static WelcomeViewController shared = new WelcomeViewController();
 
     // TODO: get majors from database
     public ArrayList<String> getMajors() {

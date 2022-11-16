@@ -3,9 +3,7 @@ package com.example.fitmeets.back;
 
 import java.util.Date;
 
-enum EventStatus {
-    ACTIVE, PAST, CANCELLED
-}
+
 
 public class Event {
 
